@@ -1,8 +1,8 @@
-//    $     
+// $       $ 
+//   $   $   
 //     $     
-// $ $ $ $ $ 
-//     $     
-//     $     
+//   $   $   
+// $       $ 
 
 
 #include <bits/stdc++.h>
@@ -13,11 +13,10 @@ int main() {
 
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= n; j++) {
-            int a = n / 2 + 1;
-            if (j == a || i == a) {
-                cout << "$ ";
-            } else {
-                cout << "  ";
+            if(i == j || i + j == n + 1){
+                cout<<"$ ";
+            }else{
+                cout<<"  ";
             }
         }
         cout << endl;
