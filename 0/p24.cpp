@@ -1,7 +1,7 @@
-// 1 2 3 4 5 6 7 
-// 1 2 3   5 6 7 
-// 1 2       6 7 
-// 1           7 
+// A B C D E F G 
+// A B C   E F G 
+// A B       F G 
+// A           G 
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -10,10 +10,11 @@ int main() {
     int n = 3;
     int nsp = 1;
     int nst = n;
+    int b = 64;
     
     // Print the first row
     for (int i = 1; i <= 2 * n + 1; i++) {
-        cout << i << " ";
+        cout << (char)(i+b) << " ";
     }
     cout << endl;
 
@@ -23,8 +24,8 @@ int main() {
         
         // Print decreasing numbers on the left side
         for (int j = 1; j <= nst; j++) {
-            cout << a << " ";
-            a++; //a = 3..    
+            cout << (char)(a+b) << " ";
+            a++; //a = 3
         }
         
         // Print spaces in the middle
@@ -37,7 +38,7 @@ int main() {
         
         // Print decreasing numbers on the right side
         for (int j = 1; j <= nst; j++) {
-            cout << a << " ";
+            cout << (char)(a+b) << " ";
             a++;
         }
         
